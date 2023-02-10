@@ -35,8 +35,7 @@ Simple steps, you can integrate **MagicIndicator**:
   
   dependencies {
       ...
-      implementation 'com.github.hackware1993:MagicIndicator:1.6.0' // for support lib
-      implementation 'com.github.hackware1993:MagicIndicator:1.7.0' // for androidx
+      implementation 'com.github.Bter:MagicIndicator:1.7.1'// for androidx
   }
   ```
   

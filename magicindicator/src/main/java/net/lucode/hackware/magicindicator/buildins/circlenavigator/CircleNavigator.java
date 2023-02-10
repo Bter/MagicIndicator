@@ -130,7 +130,9 @@ public class CircleNavigator extends View implements IPagerNavigator {
                 mCirclePoints.add(pointF);
                 startX += centerSpacing;
             }
-            mIndicatorX = mCirclePoints.get(mCurrentIndex).x;
+            if(mCurrentIndex > -1 && mCurrentIndex < mCirclePoints.size()){
+                mIndicatorX = mCirclePoints.get(mCurrentIndex).x;
+            }
         }
     }
 
@@ -191,7 +193,9 @@ public class CircleNavigator extends View implements IPagerNavigator {
     public void onPageSelected(int position) {
         mCurrentIndex = position;
         if (!mFollowTouch) {
-            mIndicatorX = mCirclePoints.get(mCurrentIndex).x;
+            if(mCurrentIndex > -1 && mCurrentIndex < mCirclePoints.size()){
+                mIndicatorX = mCirclePoints.get(mCurrentIndex).x;
+            }
             invalidate();
         }
     }
